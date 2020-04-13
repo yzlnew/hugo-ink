@@ -6,7 +6,7 @@
     src: url("https://rsms.me/inter/font-files/Inter-Regular.woff2") format("woff2"),
          url("https://rsms.me/inter/font-files/Inter-Regular.woff") format("woff");
   }
-  
+
   @font-face {
     font-family: 'Inter';
     font-display: auto;
@@ -292,7 +292,7 @@ ul {
     text-align: center;
 }
 .post-header .meta .date .day {
-    font-family: "Playfair Display", serif;
+    font-family: "Inter";
     font-weight: 700;
     line-height: 0.45em;
     font-size: 3em;
@@ -397,11 +397,11 @@ ul {
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     h3 {
