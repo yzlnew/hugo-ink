@@ -6,6 +6,7 @@
 		{{ partial "head.html" . }}
 
 		<div class="post">
+            <article>
 			<div class="post-header">
 				<div class="matter">
 					<h1 class="title">{{ .Title }}</h1>
@@ -14,10 +15,15 @@
                     </div>
 				</div>
 			</div>
+            </article>
 
 			<div class="markdown">
 				{{ .Content }}
 			</div>
+
+            <aside>
+                {{ .TableOfContents }}
+            </aside>
 
 			<div class="tags">
 				{{ if ne .Type "page" }}
