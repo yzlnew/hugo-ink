@@ -9,7 +9,6 @@
 		{{ if isset .Data "Term" }}
 			<h2>{{ .Data.Term }}</h2>
 		{{ else }}
-		<h2 class="page-title">{{ .Name }}</h2>
 		{{ end }}
 
 		<ul class="posts flat">
@@ -18,16 +17,13 @@
 			{{- else -}}
 			<li class="post">
 				<div class="post-header">
-					<div class="meta">
-						<div class="date">
-							<span class="day">{{ dateFormat "02" .Date }}</span>
-							<span class="rest">{{ if $.Site.Data.month }}{{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }}{{ else }}{{ dateFormat "Jan 2006" .Date }}{{ end }}</span>
-						</div>
-					</div>
 					<div class="matter">
 						<h4 class="title small">
 							<a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
 						</h4>
+                        <div class="meta">
+							<span class="date">{{ .Date.Format "2006-01-02" }}</span>
+						</div>
 						<span class="description">
 							{{ if isset .Params "description" }}
 								{{ .Description }}
@@ -45,5 +41,4 @@
 
 	{{ partial "footer.html" . }}
 </body>
-
 </html>

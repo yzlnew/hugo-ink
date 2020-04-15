@@ -8,3 +8,5 @@
 {{- with .Site.Params.Social -}}
 <script>feather.replace()</script>
 {{- end -}}
+
+{{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}

@@ -17,36 +17,23 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    color: #333;
-    line-height: 1.8em;
-    font-size: 17px;
+    font: 400 16px/1.6 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    color: #4c4c4c;
 }
 
 a {
-    color: #3700ff;
+    color: #000;
     text-decoration: none;
     word-break: break-word;
 }
     a:hover {
-        border-bottom: 2px solid #3700ff;
+        border-bottom: 1.5px solid #ffce05;
     }
 
 html,button,input,select,textarea {
     color: #333;
-}
-
-::-moz-selection {
-    background: #3700ff;
-    text-shadow: none;
-    color: #fff;
-}
-
-::selection {
-    background: #3700ff;
-    text-shadow: none;
-    color: #fff;
 }
 
 hr {
@@ -111,15 +98,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.75rem;
+    font-size: 1.8rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 h4 {
@@ -214,7 +201,7 @@ ul {
 }
 .header .avatar img {
     width: 64px;
-    height: 64px;
+    height: 64x;
     overflow: hidden;
     border-radius: 100%;
 }
@@ -227,7 +214,7 @@ ul {
         text-decoration: none !important;
     }
     .site-title a:hover {
-        border-bottom-width: 3px;
+        border-bottom-width: 0px;
     }
 
 .header .site-description {
@@ -236,7 +223,6 @@ ul {
 }
 
 .header nav {
-    border-top: 1px solid #eee;
     padding-top: 15px;
 }
 
@@ -255,7 +241,7 @@ ul {
         color: #333;
     }
     .header nav.social a:hover {
-        color: #3700ff;
+        color: #ffce05;
     }
 
 .header .site-description nav {
@@ -280,42 +266,39 @@ ul {
 }
 
 .recent-posts .posts .post {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 
 .post-header {
     display: flex;
 }
-.post-header .meta .date {
-    margin-right: 30px;
-    width: 64px;
-    text-align: center;
+
+.post-header .matter .meta .date {
+    font: 400 16px/1.6 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    color: #7f7f7f;
 }
-.post-header .meta .date .day {
-    font-family: "Inter";
-    font-weight: 700;
-    line-height: 0.45em;
-    font-size: 3em;
-    display: block;
-    margin-bottom: 20px;
+
+.post-header .meta {
+    margin-bottom: 5px;
+    margin-left: 0;
 }
-.post-header .meta .date .rest {
-    display: block;
-    font-size: 0.75em;
-}
+
 .post-header h1.title {
+    font-size: 1.6em;
     margin: -10px 0 0 0;
 }
 
 .post .title.small {
-    margin: 0 0 10px 0;
+    margin: -10px 0 0 0;
 }
 .post .post-header {
     margin-bottom: 30px;
 }
 
 .post .draft-label {
-    color: #3700ff;
+    color: #ffce05;
     text-decoration: none;
     padding: 2px 4px;
     border-radius: 4px;
@@ -325,19 +308,28 @@ ul {
 
 .post .tags a {
     display: inline-block;
-    border: 1px solid #3700ff;
+    border: 1.5px solid #ffce05;
     border-radius: 3px;
     padding: 0px 6px;
-    color: #3700ff;
+    color: #ffce05;
     line-height: 20px;
+    font-weight: 500;
     font-size: 0.85em;
     text-decoration: none;
     margin: 0 10px 0 0;
 }
 
-.list .posts .post-header .meta {
-    margin-bottom: 0;
-    margin-left: 5px;
+.tag-cloud a {
+    display: inline-block;
+    border: 1.5px solid #ffce05;
+    border-radius: 3px;
+    padding: 0px 6px;
+    color: #ffce05;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 0.85em;
+    text-decoration: none;
+    margin: 0 10px 0 0;
 }
 
 .footer {
@@ -349,10 +341,10 @@ ul {
     padding: 15px 0;
 }
     .footer a {
-        color: #666;
+        color: #4c4c4c;
     }
     .footer a:hover {
-        color: #3700ff;
+        color: #ffce05;
     }
 
 .tag-cloud {
