@@ -21,10 +21,6 @@
 				{{ .Content }}
 			</div>
 
-            <aside>
-                {{ .TableOfContents }}
-            </aside>
-
 			<div class="tags">
 				{{ if ne .Type "page" }}
 					{{ if gt .Params.tags 0 }}
