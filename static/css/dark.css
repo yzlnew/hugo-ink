@@ -3,18 +3,6 @@ body {
 	background-color: #000;
 }
 
-::-moz-selection {
-	background: #9375fd;
-	color: #fff;
-    text-shadow: none
-}
-
-::selection {
-	background: #9375fd;
-	color: #fff;
-    text-shadow: none
-}
-
 hr {
     border-color: #333;
 }
@@ -28,7 +16,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a,a:hover {
-	color: #9375fd;
+	color: #5c5c5c;
 	text-decoration: none;
 }
 

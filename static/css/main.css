@@ -72,7 +72,6 @@ table {
   background-color: transparent;
   margin-bottom: 1rem;
   overflow-x: auto;
-  width: 100%;
 }
 
 table th,
@@ -80,6 +79,7 @@ table td {
   border-bottom: 1px solid #dee2e6;
   padding: 0.75rem;
   vertical-align: top;
+  text-align: left;
 }
 
 table thead th {
@@ -96,7 +96,7 @@ table tbody tr:nth-of-type(even) {
 }
 
 table th {
-  background-color: #212529;
+  background-color: #4c4c4c;
   border-color: #32383e;
   color: #fff;
 }
@@ -111,7 +111,7 @@ blockquote {
     font-size: 1.4rem;
     font-family: Georgia,bitstream charter,serif;
     border-left: 3px solid;
-    border-color: #3700ff;
+    border-color: #ffce05;
     padding-left: 20px;
 }
 
