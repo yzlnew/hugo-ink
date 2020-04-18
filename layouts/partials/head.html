@@ -11,16 +11,9 @@
 		{{- if isset .Site.Params "subtitle" -}}
 		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
 		{{- end -}}
-		<nav class="nav social">
-			<ul class="flat">
-				{{- range $index, $key := .Site.Params.Social -}}
-					<li><a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a></li>
-				{{- end -}}
-			</ul>
-		</nav>
-                {{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
-                <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a>
-                {{- end -}}
+        {{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
+        <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a>
+        {{- end -}}
 	</div>
 
 	<nav class="nav">

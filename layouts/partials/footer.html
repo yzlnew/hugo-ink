@@ -1,6 +1,13 @@
 <div class="footer wrapper">
-	<nav class="nav">
-		<div>{{ .Date.Year}} {{ with .Site.Copyright }} {{ . | safeHTML }} | {{ end }} <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+<div class="social-links">
+    <ul class="social-media-list">
+        {{- range $index, $key := .Site.Params.Social -}}
+            <li><a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a></li>
+        {{- end -}}
+    </ul>
+</div>
+	<nav class="copyright">
+		<div>{{ .Date.Year}} {{ with .Site.Copyright }} {{ . | safeHTML }} {{ end }}</div>
 	</nav>
 </div>
 

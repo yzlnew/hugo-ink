@@ -1,6 +1,6 @@
 body {
-	color: #ddd;
-	background-color: #000;
+	color: rgba(255,255,255,0.6);
+	background-color: #292929;
 }
 
 hr {
@@ -12,11 +12,11 @@ blockquote {
 }
 
 h1,h2,h3,h4,h5,h6 {
-	color: #ddd;
+	color: rgba(255,255,255,0.97);
 }
 
 a,a:hover {
-	color: #5c5c5c;
+	color: rgba(255,255,255,0.97);
 	text-decoration: none;
 }
 
@@ -26,7 +26,7 @@ table tbody tr:nth-of-type(even) {
 
 .site-description a,
 .site-description a:hover {
-	color: #ddd;
+	color: rgba(255,255,255,0.87);
 	text-decoration: underline;
 }
 
@@ -35,12 +35,12 @@ a:hover {
 }
 
 .post-tags .tags a {
-    border: 1px solid #ddd;
-	color: #ddd;
+    border: 1px solid rgba(255,255,255,0.87);
+	color: rgba(255,255,255,0.87);
 }
 
 .site-title a {
-	color: #ddd;
+	color: rgba(255,255,255,0.87);
 	text-decoration: none !important;
 }
 
@@ -51,4 +51,47 @@ a:hover {
 
 .highlight {
 	background-color: #333;
+}
+
+.social-links a {
+    color: rgba(255,206,5,0.7);
+}
+.social-links a:hover {
+    color: rgba(255,255,255,0.6);
+}
+
+.post-header .matter .meta .date {
+    color: rgba(255,255,255,0.3)
+}
+
+div.notices p {
+    color: rgba(0,0,0,0.74);
+}
+
+div.notices p:first-child:before {
+    color: rgba(0,0,0,1);
+}
+
+div.notices p:first-child:after {
+    color: rgba(0,0,0,1);
+}
+
+div.notices.info p {
+    border-top: 30px solid rgba(240, 179, 126,0.7);
+    background: rgba(255, 232, 219, 0.7);
+}
+
+div.notices.warning p {
+    border-top: 30px solid rgba(182, 75, 72, 0.7);
+    background: rgba(250, 226, 226, 0.7);
+}
+
+div.notices.note p {
+    border-top: 30px solid rgba(106, 176, 222, 0.7);
+    background: rgba(231, 242, 250, 0.7);
+}
+
+div.notices.tip p {
+    border-top: 30px solid rgba(82, 156, 82, 0.7);
+    background: rgba(230, 249, 230,0.7);
 }

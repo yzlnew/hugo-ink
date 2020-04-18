@@ -76,19 +76,19 @@ table {
 
 table th,
 table td {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid rgba(255,255,255,0.87);
   padding: 0.75rem;
   vertical-align: top;
   text-align: left;
 }
 
 table thead th {
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid rgba(255,255,255,0.87);
   vertical-align: bottom;
 }
 
 table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid rgba(255,255,255,0.87);
 }
 
 table tbody tr:nth-of-type(even) {
@@ -242,6 +242,7 @@ ul {
 }
 .header .site-title {
     margin: 0 0 10px 0;
+    font-family: "Iosevka Web";
     line-height: 0.2em;
 }
     .site-title a {
@@ -272,12 +273,22 @@ ul {
     list-style: none;
     margin: 0 30px 0 0;
 }
-    .header nav.social a {
-        color: #333;
-    }
-    .header nav.social a:hover {
-        color: #ffce05;
-    }
+
+.social-media-list {
+    display: table;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.social-media-list li {
+    font-size: 18px;
+    float: left;
+    margin: 0 12px;
+}
+
+.social-media-list svg {
+    max-height: 15px;
+}
 
 .header .site-description nav {
     margin: 0;
@@ -300,8 +311,8 @@ ul {
 }
 
 .header .site-description .scheme-toggle a.dark svg {
-    fill: #f8e04f;
-    color: #f8e04f;
+    fill: rgba(255,206,5,0.7);
+    color: rgba(255,206,5,0.7);
 }
 
 .header .site-description .scheme-toggle a.light svg {
@@ -386,7 +397,7 @@ ul {
 }
 
 .footer {
-    text-align: right;
+    text-align: center;
     font-size: 0.75em;
     color: #999;
     border-top: 1px solid #f4f4f4;
