@@ -489,9 +489,26 @@ ul {
     }
 }
 
+@media screen and (min-width: 900px) {
+    .sidebar {
+        display: block;
+        float: right;
+        position: sticky;
+    }
+    .sidebar ul {
+        padding-left: 15px;
+        padding-right: 15px;
+        position: fixed;
+    }
+    .sidebar a {
+        color: #4c4c4c;
+    }
+}
+
 div.notices {
     margin: 2rem 0;
     position: relative;
+    max-width: 100%;
 }
 div.notices p {
     padding: 15px;

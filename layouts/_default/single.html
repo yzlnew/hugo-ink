@@ -7,6 +7,11 @@
 
 		<div class="post">
             <article>
+            {{ if .Params.toc | default true }}
+            <div class="sidebar">
+                {{.TableOfContents}}
+            </div>
+            {{ end }}
 			<div class="post-header">
 				<div class="matter">
 					<h1 class="title">{{ .Title }}</h1>
