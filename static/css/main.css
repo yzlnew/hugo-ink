@@ -494,14 +494,25 @@ ul {
         display: block;
         float: right;
         position: sticky;
+        width: 180px;
     }
     .sidebar ul {
         padding-left: 15px;
         padding-right: 15px;
+        max-width: 180px;
         position: fixed;
     }
     .sidebar a {
         color: #4c4c4c;
+    }
+    .markdown {
+        max-width: calc(100% - 180px - 30px)
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sidebar {
+        display: none;
     }
 }
 
