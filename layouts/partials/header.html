@@ -10,7 +10,7 @@
 	{{- end -}}
 
 	{{- if isset .Site.Params "favicon" -}}
-		<link rel="icon" type="image/png" href={{ .Site.Params.favicon }} />
+		<link rel="icon" type="image/png" href=/{{ .Site.Params.favicon }} />
 	{{- end -}}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,4 +43,9 @@
 	{{- if isset .Site.Params "customjs" -}}
 		{{- range .Site.Params.customJS }}<script src="{{ $.Site.BaseURL }}{{ . }}"></script>{{- end }}
 	{{- end }}
+    <script charset="utf-8">
+    var tabName = document.title;
+    window.onblur = function () { document.title = '舞舞舞 - 💃'; }
+    window.onfocus = function () { document.title = tabName; }
+    </script>
 </head>
