@@ -572,6 +572,10 @@ div.notices.tip p:first-child:after {
     content: 'Tip';
 }
 
+code {
+    font-family: "Iosevka Web";
+}
+
 /* Background */ .chroma { color: #4d4d4d; background-color: #ffffff }
 /* Error */ .chroma .err { color: #ffffff; background-color: #cc0000 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }

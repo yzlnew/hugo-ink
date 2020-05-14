@@ -93,11 +93,14 @@ div.notices.note p {
 
 div.notices.tip p {
     border-top: 30px solid rgba(82, 156, 82, 0.7);
-    background: rgba(230, 249, 230,0.7);
+    background: rgba(230, 249, 230, 0.7);
 }
 
+code {
+    font-family: "Iosevka Web";
+}
 
-/* Background */ .chroma { color: #d0d0d0; background-color: #202020 }
+/* Background */ .chroma { color: #d0d0d0; background-color: #202020; }
 /* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
