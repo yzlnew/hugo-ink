@@ -16,6 +16,25 @@
          url("https://rsms.me/inter/font-files/Inter-Medium.woff") format("woff");
 }
 
+table::-webkit-scrollbar
+{
+    width:6px;
+    height:6px;
+    background-color:#F5F5F5;
+}
+table::-webkit-scrollbar-track
+{
+    -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.3);
+    border-radius:0px;
+    background-color:#F5F5F5;
+}
+table::-webkit-scrollbar-thumb
+{
+    border-radius:0px;
+    -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,.3);
+    background-color:#666;
+}
+
 body {
     font: 400 16px/1.6 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
     font-feature-settings: 'kern';
@@ -575,6 +594,7 @@ div.notices.tip p:first-child:after {
 code {
     font-family: "Iosevka Web";
 }
+
 
 /* Background */ .chroma { color: #4d4d4d; background-color: #ffffff }
 /* Error */ .chroma .err { color: #ffffff; background-color: #cc0000 }
