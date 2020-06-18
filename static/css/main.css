@@ -259,7 +259,7 @@ ul {
 }
 .header .site-title {
     margin: 0 0 10px 0;
-    font-family: "JetBrainsMono";
+    font-family: "JetBrainsMono", monospace;
     line-height: 0.2em;
 }
     .site-title a {
@@ -559,7 +559,7 @@ div.notices p:first-child:after {
     position: absolute;
     top: 2px;
     color: #fff;
-    font-family: "JetBrainsMono";
+    font-family: "JetBrainsMono", monospace;
     left: 2rem;
 }
 div.notices.info p {
@@ -592,7 +592,7 @@ div.notices.tip p:first-child:after {
 }
 
 code {
-    font-family: "JetBrainsMono";
+    font-family: "JetBrainsMono", monospace;
 }
 
 
