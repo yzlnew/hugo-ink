@@ -36,7 +36,7 @@ table::-webkit-scrollbar-thumb
 }
 
 body {
-    font: 400 14px/1.6 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
+    font: 400 15px/1.4 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
     font-feature-settings: 'kern';
     font-kerning: normal;
     color: #4c4c4c;
@@ -152,19 +152,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.8rem;
-}
-
-h2 {
-    font-size: 1.6rem;
-}
-
-h3 {
     font-size: 1.4rem;
 }
 
-h4 {
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
     font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.1rem;
 }
 
 h5 {
@@ -367,7 +367,7 @@ ul {
 }
 
 .post-header h1.title {
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin: -10px 0 0 0;
 }
 
@@ -470,15 +470,15 @@ ul {
     }
 
     h1 {
-        font-size: 1.6rem;
-    }
-
-    h2 {
         font-size: 1.4rem;
     }
 
-    h3 {
+    h2 {
         font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
     }
 
     h4 {
