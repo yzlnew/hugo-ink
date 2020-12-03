@@ -191,6 +191,10 @@ ul {
     padding-left: 15px;
 }
 
+ul {
+    list-style: disc inside;
+}
+
 ul.flat {
     margin: 0;
     padding: 0;
@@ -210,12 +214,12 @@ ul.flat li {
     font-size: 70%;
 }
 
-ul {
-    list-style: disc inside;
+.post ul li {
+    margin-bottom: 5px;
 }
 
-.post ul li {
-    margin-bottom: 10px;
+.post ol li {
+    margin-bottom: 5px;
 }
 
 .post ul li p {
@@ -513,12 +517,12 @@ ul {
         position: sticky;
         width: 180px;
     }
-    .sidebar ul {
-        padding-left: 15px;
-        padding-right: 15px;
-        max-width: 180px;
-        position: fixed;
-    }
+    /* .sidebar ul { */
+    /*     padding-left: 15px; */
+    /*     padding-right: 15px; */
+    /*     max-width: 180px; */
+    /*     position: fixed; */
+    /* } */
     .sidebar a {
         color: #4c4c4c;
     }
