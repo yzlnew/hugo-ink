@@ -253,7 +253,7 @@ ul.flat li {
 
 .header .avatar {
     float: left;
-    margin: 0 20px 0 0;
+    margin: -25px 20px 0 0;
 }
 .header .avatar img {
     width: 64px;
@@ -278,9 +278,6 @@ ul.flat li {
     display: flex;
     justify-content: space-between;
 }
-    .header .site-description p {
-        margin: 0 0 10px 0;
-    }
 
 .header nav {
     padding-top: 15px;
