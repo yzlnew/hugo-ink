@@ -243,7 +243,7 @@ ul.flat li {
 
 .container {
     max-width: 800px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .header {
@@ -253,7 +253,7 @@ ul.flat li {
 
 .header .avatar {
     float: left;
-    margin: -25px 20px 0 0;
+    margin: 0 20px 0 0;
 }
 .header .avatar img {
     width: 64px;
@@ -278,6 +278,9 @@ ul.flat li {
     display: flex;
     justify-content: space-between;
 }
+    .header .site-description p {
+        margin: 0 0 10px 0;
+    }
 
 .header nav {
     padding-top: 15px;
@@ -498,7 +501,7 @@ ul.flat li {
     }
     .header .nav li {
         margin: 0 10px 0 0;
-        font-size: 14px;
+        font-size: 0.875em;
     }
 
     table {
