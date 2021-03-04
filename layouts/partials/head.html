@@ -11,9 +11,9 @@
 		{{- if isset .Site.Params "subtitle" -}}
 		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
 		{{- end -}}
-        {{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
-        <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a>
-        {{- end -}}
+        <!-- {{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}} -->
+        <!-- <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a> -->
+        <!-- {{- end -}} -->
 	</div>
 
 	<nav class="nav">

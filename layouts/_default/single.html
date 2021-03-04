@@ -4,11 +4,11 @@
 <body>
 	<div class="container wrapper">
 		{{ partial "head.html" . }}
-            {{ if .Params.toc | default true }}
-            <div class="sidebar">
-                {{.TableOfContents}}
-            </div>
-            {{ end }}
+        {{ if .Params.toc | default true }}
+        <div class="sidebar">
+            {{.TableOfContents}}
+        </div>
+        {{ end }}
 		<div class="post">
             <article>
 			<div class="post-header">

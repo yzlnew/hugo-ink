@@ -3,7 +3,7 @@ html.dark body {
   background-color: #292929;
 }
 
-hr {
+html.dark hr {
     border-color: #333;
 }
 
@@ -40,12 +40,12 @@ html.dark h6 {
   color: rgba(255,255,255,0.87);
 }
 
-a,a:hover {
+html.dark a,html.dark a:hover {
 	color: rgba(255,255,255,0.87);
 	text-decoration: none;
 }
 
-.site-title a {
+html.dark .site-title a {
 	color: rgba(255,255,255,0.87);
 	text-decoration: none !important;
 }
@@ -89,45 +89,45 @@ html.dark .highlight {
   background-color: #333;
 }
 
-.social-links a {
+html.dark .social-links a {
     color: rgba(255,206,5,0.7);
 }
-.social-links a:hover {
+html.dark .social-links a:hover {
     color: rgba(255,255,255,0.6);
 }
 
-.post-header .matter .meta .date {
+html.dark .post-header .matter .meta .date {
     color: rgba(255,255,255,0.3)
 }
 
-div.notices p {
+html.dark div.notices p {
     color: rgba(0,0,0,0.74);
 }
 
-div.notices p:first-child:before {
+html.dark div.notices p:first-child:before {
     color: rgba(0,0,0,1);
 }
 
-div.notices p:first-child:after {
+html.dark div.notices p:first-child:after {
     color: rgba(0,0,0,1);
 }
 
-div.notices.info p {
+html.dark div.notices.info p {
     border-top: 30px solid rgba(240, 179, 126,0.7);
     background: rgba(255, 232, 219, 0.7);
 }
 
-div.notices.warning p {
+html.dark div.notices.warning p {
     border-top: 30px solid rgba(182, 75, 72, 0.7);
     background: rgba(250, 226, 226, 0.7);
 }
 
-div.notices.note p {
+html.dark div.notices.note p {
     border-top: 30px solid rgba(106, 176, 222, 0.7);
     background: rgba(231, 242, 250, 0.7);
 }
 
-div.notices.tip p {
+html.dark div.notices.tip p {
     border-top: 30px solid rgba(82, 156, 82, 0.7);
     background: rgba(230, 249, 230, 0.7);
 }
