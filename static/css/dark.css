@@ -1,20 +1,24 @@
 html.dark body {
-  color: #ddd;
-  background-color: #000;
+  color: rgba(255,255,255,0.6);;
+  background-color: #292929;
 }
 
 hr {
     border-color: #333;
+}
+
 html.dark ::-moz-selection {
-  background: #9375fd;
+  background: #7A6000
   color: #fff;
   text-shadow: none
 }
 
 blockquote {
 	border-color: #ddd;
+}
+
 html.dark ::selection {
-  background: #9375fd;
+  background: #7A6000;
   color: #fff;
   text-shadow: none
 }
@@ -33,12 +37,22 @@ html.dark h3,
 html.dark h4,
 html.dark h5,
 html.dark h6 {
-  color: #ddd;
+  color: rgba(255,255,255,0.87);
+}
+
+a,a:hover {
+	color: rgba(255,255,255,0.87);
+	text-decoration: none;
+}
+
+.site-title a {
+	color: rgba(255,255,255,0.87);
+	text-decoration: none !important;
 }
 
 table tbody tr:nth-of-type(even) {
 html.dark a,a:hover {
-  color: #9375fd;
+  color: rgba(255,255,255,0.87);
   text-decoration: none;
 }
 
