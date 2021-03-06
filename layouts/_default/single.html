@@ -6,6 +6,7 @@
 		{{ partial "head.html" . }}
         {{ if .Params.toc | default true }}
         <div class="sidebar">
+            <h4>文章目录</h4>
             {{.TableOfContents}}
         </div>
         {{ end }}

@@ -36,7 +36,7 @@ table::-webkit-scrollbar-thumb
 }
 
 body {
-    font: 400 15px/1.4 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
+    font: 400 16px/1.6 "Inter",source-han-sans-cjk-sc,sans-serif;
     font-feature-settings: 'kern';
     font-kerning: normal;
     color: #4c4c4c;
@@ -146,33 +146,40 @@ blockquote em {
 
 h1, h2, h3, h4, h5, h6 {
     color: #333;
-    font-weight: 500;
+    font-weight: normal;
     line-height: 1.3em;
-    margin: 30px 0 20px 0;
+}
+
+h1, h2, h3 {
+    margin: 30px 0 30px 0;
+}
+
+h4, h5, h6 {
+    margin: 15px 0 15px 0;
 }
 
 h1 {
-    font-size: 1.4rem;
+    font-size: 24px;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 22px;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 h4 {
-    font-size: 1.1rem;
+    font-size: 18px;
 }
 
 h5 {
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 h6 {
-    font-size: .9rem;
+    font-size: 14px;
 }
 
 .align-center {
@@ -187,11 +194,8 @@ h6 {
     text-align: right;
 }
 
-ul {
+.post ul {
     padding-left: 15px;
-}
-
-ul {
     list-style: disc inside;
 }
 
@@ -215,11 +219,11 @@ ul.flat li {
 }
 
 .post ul li {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .post ol li {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .post ul li p {
@@ -510,6 +514,23 @@ ul.flat li {
     }
 }
 
+.sidebar ul {
+    padding-left: 1em;
+    list-style: disc outside;
+}
+
+.sidebar ul ul {
+    list-style: circle outside;
+}
+
+.sidebar li {
+    font-size: 14px;
+}
+
+.sidebar h4 {
+    font-weight: normal;
+}
+
 @media screen and (min-width: 900px) {
     .sidebar {
         display: block;
@@ -517,6 +538,11 @@ ul.flat li {
         position: sticky;
         width: 180px;
         top: 90px;
+        /* background: rgba(0,0,0,0.05); */
+        /* border-radius: 10px; */
+        /* border-style: solid; */
+        /* border-color: rgba(255, 200, 5, 0.5); */
+        /* padding: 5px; */
     }
     .sidebar a {
         color: #4c4c4c;
@@ -590,12 +616,10 @@ div.notices.tip p:first-child:after {
     content: 'Tip';
 }
 
-pre code {
-    overflow-x: auto;
-}
-
 code {
     font-family: "JetBrainsMono", monospace;
+    /* background: #f0f0f0; */
+    /* border-radius: 3px; */
 }
 
 
