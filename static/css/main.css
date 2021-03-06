@@ -383,7 +383,7 @@ ul.flat li {
     margin: -10px 0 0 0;
 }
 .post .post-header {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .post .draft-label {
@@ -398,27 +398,36 @@ ul.flat li {
 .post .tags a {
     display: inline-block;
     border: 1.5px solid #ffce05;
-    border-radius: 3px;
+    border-radius: 10px;
+    background-color: #FFFBEB;
     padding: 0px 6px;
     color: #ffce05;
     line-height: 20px;
     font-weight: 500;
     font-size: 0.85em;
     text-decoration: none;
-    margin: 0 10px 0px 0;
+}
+
+div.meta .tags ul > li{
+    display: inline-block;
 }
 
 .tag-cloud a {
     display: inline-block;
     border: 1.5px solid #ffce05;
-    border-radius: 3px;
-    padding: 0px 6px 6px 6px;
+    border-radius: 20px;
+    background-color: #FFFBEB;
+    padding: 0px 10px 6px 10px;
     color: #ffce05;
     line-height: 20px;
     font-weight: 500;
     font-size: 0.85em;
     text-decoration: none;
     margin: 0 10px 10px 0;
+}
+
+.tag-cloud {
+    margin-top: 20px;
 }
 
 .footer {
@@ -435,14 +444,6 @@ ul.flat li {
     .footer a:hover {
         color: #ffce05;
     }
-
-.tag-cloud {
-    margin-top: 20px;
-}
-
-.tag-cloud a {
-    margin-right: 15px;
-}
 
 .pagination {
     margin: 0;

@@ -17,25 +17,25 @@
 					<h1 class="title">{{ .Title }}</h1>
                     <div class="meta">
                         <span class="date">{{ dateFormat "2006-01-02" .Date }}</span>
+                        <div class="tags">
+                            {{ if ne .Type "page" }}
+                                {{ if gt .Params.tags 0 }}
+                                    <ul class="flat">
+                                        {{ range .Params.tags }}
+                                        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                                        {{ end }}
+                                    </ul>
+                                {{ end }}
+                            {{ end }}
+                        </div>
                     </div>
 				</div>
 			</div>
             </article>
 
+
 			<div class="markdown">
 				{{ .Content }}
-			</div>
-
-			<div class="tags">
-				{{ if ne .Type "page" }}
-					{{ if gt .Params.tags 0 }}
-						<ul class="flat">
-							{{ range .Params.tags }}
-							<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-							{{ end }}
-						</ul>
-					{{ end }}
-				{{ end }}
 			</div>
 
             {{ if .Site.Params.gitalk }}
