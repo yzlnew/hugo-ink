@@ -406,10 +406,12 @@ ul.flat li {
     font-weight: 500;
     font-size: 0.85em;
     text-decoration: none;
+    margin-right: 0px;
 }
 
 div.meta .tags ul > li{
     display: inline-block;
+    margin-right: 3px;
 }
 
 .tag-cloud a {
