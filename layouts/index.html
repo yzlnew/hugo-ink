@@ -18,6 +18,9 @@
 								</h4>
                                 <div class="meta">
                                     <span class="date">{{ dateFormat "2006-01-02" .Date }}</span>
+                                    {{ if gt .Lastmod .Date }}
+                                    <span class="date mod">+最近修改 {{ dateFormat "2006-01-02" .Lastmod }}</span>
+                                    {{ end }}
                                 <div class="tags">
                                     {{ if ne .Type "page" }}
                                         {{ if gt .Params.tags 0 }}

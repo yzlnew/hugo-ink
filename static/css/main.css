@@ -370,6 +370,12 @@ ul.flat li {
     display: flex;
 }
 
+.post-header .matter .meta .date.mod {
+    color: #6ba664;
+    background-color: #e1ebe0;
+    border-radius: 4px;
+}
+
 .post-header .matter .meta .date {
     font: 400 16px/1.6 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
     font-feature-settings: 'kern';
