@@ -219,6 +219,10 @@ ul.flat li {
     margin-left: 0;
 }
 
+ul.social-media-list {
+    padding-inline-start: 0px;
+}
+
 .prevent-collapse {
     min-height: .1rem
 }
@@ -411,7 +415,7 @@ ul.flat li {
 
 .post .tags a {
     display: inline-block;
-    border: 1.5px solid var(--yzl-color-yellow);
+    border: 2px solid var(--yzl-color-yellow);
     border-radius: 10px;
     background-color: #FFFBEB;
     padding: 0px 6px;
@@ -430,7 +434,7 @@ div.meta .tags ul > li{
 
 .tag-cloud a {
     display: inline-block;
-    border: 1.5px solid var(--yzl-color-yellow);
+    border: 2px solid var(--yzl-color-yellow);
     border-radius: 20px;
     background-color: #FFFBEB;
     padding: 0px 10px 6px 10px;
