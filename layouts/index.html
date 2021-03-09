@@ -7,7 +7,7 @@
 
 		<div class="recent-posts section">
 			<div class="posts">
-				{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+				{{ $pages := where .Site.RegularPages.ByLastmod.Reverse "Type" "in" .Site.Params.mainSections }}
 				{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 				{{ range $paginator.Pages }}
 					<div class="post">
