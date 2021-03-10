@@ -108,6 +108,7 @@ table td {
   padding: 0.75rem;
   vertical-align: top;
   text-align: left;
+  border-radius: 10px;
 }
 
 table thead th {
@@ -124,7 +125,7 @@ table tbody tr:nth-of-type(even) {
 }
 
 table th {
-  background-color: #4c4c4c;
+  background-color: rgba(0, 0, 0, 0.5);
   border-color: var(--yzl-color-black);
   color: #fff;
 }
