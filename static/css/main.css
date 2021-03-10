@@ -18,6 +18,7 @@
 
 :root {
     --yzl-color-yellow: #FFC805;
+    --yzl-color-yellow-low: #FFFBEB;
     --yzl-color-black: #323337;
     --yzl-color-green: #709255;
     --yzl-color-red: #DB4C40;
@@ -418,7 +419,7 @@ ul.social-media-list {
     display: inline-block;
     border: 2px solid var(--yzl-color-yellow);
     border-radius: 10px;
-    background-color: #FFFBEB;
+    background-color: var(--yzl-color-yellow-low);
     padding: 0px 6px;
     color: var(--yzl-color-yellow);
     line-height: 20px;
@@ -437,7 +438,7 @@ div.meta .tags ul > li{
     display: inline-block;
     border: 2px solid var(--yzl-color-yellow);
     border-radius: 20px;
-    background-color: #FFFBEB;
+    background-color: var(--yzl-color-yellow-low);
     padding: 0px 10px 6px 10px;
     color: var(--yzl-color-yellow);
     line-height: 20px;
@@ -584,4 +585,59 @@ code {
     font-family: "JetBrainsMono", monospace;
     /* background: #f0f0f0; */
     /* border-radius: 3px; */
+}
+
+/* gitalk */
+.gt-container .gt-btn {
+  border: 1px solid var(--yzl-color-yellow);
+  background-color: var(--yzl-color-yellow);
+  border-radius: 10px;
+}
+
+.gt-container .gt-btn-preview {
+  color: var(--yzl-color-yellow);
+}
+
+.gt-container .gt-header-controls-tip {
+  color: var(--yzl-color-yellow);
+}
+
+.gt-container .gt-svg svg {
+  fill: var(--yzl-color-yellow);
+}
+
+.gt-container a:hover {
+  color: var(--yzl-color-yellow-low);
+  border-color: var(--yzl-color-yellow-low);
+}
+
+.gt-container .gt-link {
+  border-bottom: 1px dotted var(--yzl-color-yellow);
+}
+
+.gt-container a {
+  color: var(--yzl-color-yellow);
+}
+
+.gt-container .gt-popup .gt-action.is--active::before {
+  /* background: #6190e8; */
+  background: var(--yzl-color-yellow);
+}
+
+.gt-container .gt-btn-preview:hover {
+  /* border-color: #81a6ed; */
+  border-color: var(--yzl-color-yellow-low);
+}
+
+.gt-container .gt-user .is--poping .gt-ico svg {
+  fill: var(--yzl-color-yellow);
+}
+
+.gt-container .gt-btn-public:hover {
+  background-color: var(--yzl-color-yellow-low);
+  border-color: var(--yzl-color-yellow-low);
+}
+
+.gt-container .gt-comment-username {
+  color: var(--yzl-color-yellow);
 }
