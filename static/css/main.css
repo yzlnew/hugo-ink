@@ -329,6 +329,10 @@ ul.social-media-list {
     max-height: 15px;
 }
 
+.site-visit svg {
+    max-height: 12px;
+}
+
 .header .site-description nav {
     margin: 0;
     padding: 0;
@@ -377,9 +381,17 @@ ul.social-media-list {
 }
 
 .post-header .matter .meta .date.mod {
-    color: #6ba664;
+    color: var(--yzl-color-green);
     background-color: #e1ebe0;
     border-radius: 4px;
+}
+
+.post-header .matter .meta .busuanzi {
+    color: rgba(1,1,1,0.2);
+}
+
+.post-header .matter .meta .busuanzi svg {
+    max-height: 15px;
 }
 
 .post-header .matter .meta .date {

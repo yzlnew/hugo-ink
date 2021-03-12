@@ -9,6 +9,14 @@
 	<nav class="copyright">
 		<div>{{ .Date.Year}} {{ with .Site.Copyright }} {{ . | safeHTML }} {{ end }}</div>
 	</nav>
+<div class="site-visit">
+    <span id="busuanzi_container_site_pv">
+        <i data-feather="compass"></i><span id="busuanzi_value_site_pv"></span>
+    </span>
+    <span id="busuanzi_container_site_uv">
+        <i data-feather="users"></i><span id="busuanzi_value_site_uv"></span>
+    </span>
+</div>
 </div>
 
 {{ template "_internal/google_analytics_async.html" . }}
