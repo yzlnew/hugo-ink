@@ -46,8 +46,8 @@
                 </span>
             </div>
 
-            {{ if .Site.Params.gitalk }}
-                {{ partial "gitalk.html" . }}
+            {{ if .Site.Params.utter }}
+                {{ partial "comment.html" . }}
             {{ end }}
 
 			{{- if .Site.DisqusShortname -}}
