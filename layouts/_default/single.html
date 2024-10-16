@@ -17,7 +17,7 @@
 					<h1 class="title">{{ .Title }}</h1>
                     <div class="meta">
                         <span class="date">{{ dateFormat "2006-01-02" .Date }}</span>
-                        <span class="busuanzi page" id="busuanzi_container_page_pv">
+                        <!-- <span class="busuanzi page" id="busuanzi_container_page_pv"> -->
                         {{ if gt .Lastmod .Date }}
                         <span class="date mod">+ 最近修改 {{ dateFormat "2006-01-02" .Lastmod }}</span>
                         {{ end }}
@@ -41,10 +41,10 @@
 			<div class="markdown">
 				{{ .Content }}
 			</div>
-            <div class="page-visit">
+            <!-- <div class="page-visit">
                 # 本文一共被访问了 <span id="busuanzi_value_page_pv"></span>&nbsp;次。
                 </span>
-            </div>
+            </div> -->
 
             {{ if .Site.Params.utter }}
                 {{ partial "comment.html" . }}

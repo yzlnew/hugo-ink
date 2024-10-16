@@ -386,13 +386,13 @@ ul.social-media-list {
     border-radius: 4px;
 }
 
-.post-header .matter .meta .busuanzi {
+/* .post-header .matter .meta .busuanzi {
     color: rgba(1,1,1,0.2);
 }
 
 .post-header .matter .meta .busuanzi svg {
     max-height: 15px;
-}
+} */
 
 .post-header .matter .meta .date, {
     font: 400 16px/1.6 "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif;
