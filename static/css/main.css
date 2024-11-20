@@ -610,4 +610,10 @@ code {
     font-family: "JetBrainsMono", monospace;
     /* background: #f0f0f0; */
     /* border-radius: 3px; */
+
+    /* Fixes iOS font sizing anomaly */
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
