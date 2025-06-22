@@ -7,7 +7,7 @@
     </ul>
 </div>
 	<nav class="copyright">
-		<div>{{ .Date.Year}} {{ with .Site.Copyright }} {{ . | safeHTML }} {{ end }}</div>
+		<div>{{ $startYear := .Site.Params.startYear | default 2019 }}{{ if eq now.Year $startYear }}{{ $startYear }}{{ else }}{{ $startYear }}-{{ now.Year }}{{ end }} {{ with .Site.Copyright }} {{ . | safeHTML }} {{ end }}</div>
 	</nav>
 <!-- <div class="site-visit">
     <span id="busuanzi_container_site_pv">
