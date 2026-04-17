@@ -50,12 +50,6 @@ html.dark .site-title a {
 	text-decoration: none !important;
 }
 
-table tbody tr:nth-of-type(even) {
-html.dark a,a:hover {
-  color: rgba(255,255,255,0.87);
-  text-decoration: none;
-}
-
 html.dark table tbody tr:nth-of-type(even) {
   background-color: rgba(255, 255, 255, 0.15);
 }
@@ -98,6 +92,16 @@ html.dark .social-links a:hover {
 
 html.dark .post-header .matter .meta .date {
     color: rgba(255,255,255,0.3)
+}
+
+html.dark .post-header .matter .meta .date.mod {
+    color: #b7d89c;
+    background-color: rgba(112, 146, 85, 0.18);
+}
+
+html.dark .post .draft-label {
+    color: #ffd86a;
+    background-color: rgba(255, 200, 5, 0.12);
 }
 
 html.dark div.notices p {
