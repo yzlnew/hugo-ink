@@ -131,3 +131,37 @@ html.dark div.notices.tip p {
     border-top: 30px solid rgba(82, 156, 82, 0.7);
     background: rgba(230, 249, 230, 0.7);
 }
+/* .gt-container .gt-header-textarea { */
+/*     font-family: "Inter","Source Han Sans SC","Noto Sans CJK SC",source-han-sans-cjk-sc,sans-serif !important; */
+/*     background-color: #242424 !important; */
+/*     color: #f8f8f8 !important; */
+/*     border: 1px solid rgba(200,200,200,0.1) !important; */
+/* } */
+
+/* .gt-container .gt-header-textarea:hover { */
+/*     background-color: #363636 !important; */
+/* } */
+
+/* .gt-container .gt-btn-preview { */
+/*     background-color: #363636 !important; */
+/* } */
+
+html.dark .control-link { color: #8a8a8a; }
+html.dark .control-link:hover { color: #f2f2f2; }
+html.dark .control-link:focus-visible { outline-color: rgba(255, 255, 255, 0.2); }
+html.dark .control-link.is-active { color: #f2f2f2; }
+html.dark .control-divider { color: #5f5f5f; }
+
+html.dark .post .tags a,
+html.dark .tag-cloud a {
+  border-color: rgba(255, 200, 5, 0.45);
+  background-color: rgba(255, 200, 5, 0.12);
+  color: #ffd86a;
+}
+
+html.dark .post .tags a:hover,
+html.dark .tag-cloud a:hover {
+  border-color: rgba(255, 216, 106, 0.72);
+  background-color: rgba(255, 200, 5, 0.18);
+  color: #ffe08a;
+}

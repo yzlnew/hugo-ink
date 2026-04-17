@@ -6,3 +6,13 @@
   translation: "信息"
 - id: tip
   translation: "提示"
+- id: recent_modified
+  translation: "最近修改"
+- id: no_translation
+  translation: "该文章暂无中文译文"
+- id: table_of_contents
+  translation: "文章目录"
+- id: prev_page
+  translation: "上一页"
+- id: next_page
+  translation: "下一页"

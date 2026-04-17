@@ -616,4 +616,160 @@ code {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Regular.woff2') format('woff2'), url('../woff/JetBrainsMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Italic.woff2') format('woff2'), url('../woff/JetBrainsMono-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Bold.woff2') format('woff2'), url('../woff/JetBrainsMono-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'JetBrainsMono';
+  src: url('../woff2/JetBrainsMono-Bold-Italic.woff2') format('woff2'), url('../woff/JetBrainsMono-Bold-Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial,
+               "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+               source-han-sans-cjk-sc, sans-serif;
+  --font-mono: "JetBrainsMono", ui-monospace, SFMono-Regular, "SF Mono",
+               Menlo, Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga", "calt";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.site-title, .title {
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+blockquote {
+  font-size: 0.9em;
+  font-style: normal;
+  font-family: var(--font-sans);
+}
+
+.header { position: relative; }
+
+.header-controls {
+  position: absolute;
+  top: 0.15rem;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.74rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.control-link {
+  color: #949494;
+  text-decoration: none !important;
+  border: 0 !important;
+  background: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: color 0.15s ease;
+}
+
+.control-link:hover {
+  color: #111;
+  border: 0 !important;
+}
+
+.control-link:focus-visible {
+  outline: 2px solid rgba(17, 17, 17, 0.18);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.control-link.is-active {
+  color: #111;
+  font-weight: 700;
+}
+
+.control-divider {
+  color: #d0d0d0;
+  user-select: none;
+}
+
+.lang-switcher .lang-link {
+  min-width: 1.8em;
+  text-align: center;
+}
+
+.theme-switcher .scheme-link {
+  min-width: 4.3em;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .header-controls {
+    position: static;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-controls {
+    gap: 0.75rem;
+    font-size: 0.68rem;
+  }
+}
+
+/* .gt-container a { */
+/*     color: #ffce05 !important; */
+/* } */
+/* .gt-container .gt-btn { */
+/*     background-color: #ffce05 !important; */
+/*     border: 1px solid #f8f8f8 !important; */
+/* } */
+
+/* .gt-container .gt-btn-preview { */
+/*     color: #ffce05 !important; */
+/* } */

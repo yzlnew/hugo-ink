@@ -1,4 +1,31 @@
 <div class="header">
+	<div class="header-controls">
+		{{ if gt (len site.Sites) 1 }}
+		{{ $currentPage := . }}
+		<div class="control-group lang-switcher" aria-label="Language switcher">
+			{{ range $index, $site := site.Sites }}
+				{{ if gt $index 0 }}<span class="control-divider" aria-hidden="true">/</span>{{ end }}
+				{{ $isCurrent := eq $site.Language.Lang $currentPage.Language.Lang }}
+				{{ $translation := index (where $currentPage.AllTranslations "Language.Lang" $site.Language.Lang) 0 }}
+				{{ $href := $site.Home.RelPermalink }}
+				{{ with $translation }}{{ $href = .RelPermalink }}{{ end }}
+				{{ $label := $site.Language.Lang | upper }}
+				{{ if or (eq $site.Language.Lang "zh") (eq $site.Language.Lang "zh-cn") }}{{ $label = "中" }}{{ end }}
+				{{ if eq $site.Language.Lang "en" }}{{ $label = "EN" }}{{ end }}
+				<a href="{{ $href }}"
+				   class="control-link lang-link{{ if $isCurrent }} is-active{{ end }}"
+				   title="{{ $site.Language.LanguageName }}"
+				   {{ if $isCurrent }}aria-current="page"{{ end }}>{{ $label }}</a>
+			{{ end }}
+		</div>
+		{{ end }}
+		<div class="control-group theme-switcher" role="group" aria-label="Color scheme switcher">
+			<button type="button" class="control-link scheme-link" data-scheme="light" aria-pressed="false">Light</button>
+			<span class="control-divider" aria-hidden="true">/</span>
+			<button type="button" class="control-link scheme-link" data-scheme="dark" aria-pressed="false">Dark</button>
+		</div>
+	</div>
+
 	{{ if .Site.Params.Avatar }}
 		<div class="avatar">
 			<a href="{{ .Site.BaseURL }}">
@@ -11,16 +38,13 @@
 		{{- if isset .Site.Params "subtitle" -}}
 		<p>{{ .Site.Params.Subtitle | markdownify }}</p>
 		{{- end -}}
-        <!-- {{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}} -->
-        <!-- <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a> -->
-        <!-- {{- end -}} -->
 	</div>
 
 	<nav class="nav">
 		<ul class="flat">
 			{{ range .Site.Menus.main }}
 			<li>
-				<a href="{{ .URL }}">{{ .Name }}</a>
+				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
 			</li>
 			{{ end }}
 		</ul>

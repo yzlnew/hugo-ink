@@ -1,45 +1,59 @@
-document.addEventListener("DOMContentLoaded", function(){
-  var toggle = document.getElementById("scheme-toggle");
+document.addEventListener("DOMContentLoaded", function () {
+  var container = document.documentElement;
+  var toggles = Array.prototype.slice.call(document.querySelectorAll(".scheme-link"));
 
-  var scheme = "light";
-  var savedScheme = localStorage.getItem("scheme");
-
-  var container = document.getElementsByTagName("html")[0];
-  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  if (prefersDark) {
-    scheme = "dark";
+  if (!toggles.length) {
+    return;
   }
 
-  if(savedScheme) {
+  var savedScheme = null;
+  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  var scheme = prefersDark ? "dark" : "light";
+
+  try {
+    savedScheme = localStorage.getItem("scheme");
+  } catch (error) {
+    savedScheme = null;
+  }
+
+  if (savedScheme === "dark" || savedScheme === "light") {
     scheme = savedScheme;
   }
 
-  if(scheme == "dark") {
-    darkscheme(toggle, container);
-  } else {
-    lightscheme(toggle, container);
-  }
+  applyScheme(scheme, container, toggles);
 
-  toggle.addEventListener("click", () => {
-    if (toggle.className === "light") {
-      darkscheme(toggle, container);
-    } else if (toggle.className === "dark") {
-      lightscheme(toggle, container);
-    }
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      var nextScheme = toggle.getAttribute("data-scheme");
+
+      if (nextScheme !== "light" && nextScheme !== "dark") {
+        return;
+      }
+
+      applyScheme(nextScheme, container, toggles);
+    });
   });
 });
 
-function darkscheme(toggle, container) {
-  localStorage.setItem("scheme", "dark");
-  toggle.innerHTML = feather.icons.sun.toSvg();
-  toggle.className = "dark";
-  container.className = "dark";
-}
+function applyScheme(scheme, container, toggles) {
+  try {
+    localStorage.setItem("scheme", scheme);
+  } catch (error) {
+    // Ignore browsers that block storage in privacy mode.
+  }
 
-function lightscheme(toggle, container) {
-  localStorage.setItem("scheme", "light");
-  toggle.innerHTML = feather.icons.moon.toSvg();
-  toggle.className = "light";
-  container.className = "";
+  container.classList.toggle("dark", scheme === "dark");
+
+  toggles.forEach(function (toggle) {
+    var isActive = toggle.getAttribute("data-scheme") === scheme;
+
+    toggle.classList.toggle("is-active", isActive);
+    toggle.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
+
+  document.dispatchEvent(
+    new CustomEvent("site-scheme-change", {
+      detail: { scheme: scheme }
+    })
+  );
 }

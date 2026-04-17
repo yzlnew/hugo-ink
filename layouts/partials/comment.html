@@ -1,8 +1,108 @@
-<div id="utter-container"></div>
-<script src="https://utteranc.es/client.js"
-    repo= '{{ .Site.Params.utter.repo }}'
-    issue-term= "{{ .Site.Params.utter.issueTerm }}"
-    theme= '{{ .Site.Params.utter.theme }}'
-    crossorigin= "anonymous"
-    async>
+{{ $lightTheme := .Site.Params.utter.theme | default "github-light" }}
+{{ $darkTheme := .Site.Params.utter.darkTheme | default "github-dark" }}
+<div
+  id="utter-container"
+  data-repo="{{ .Site.Params.utter.repo }}"
+  data-issue-term="{{ .Site.Params.utter.issueTerm }}"
+  data-theme-light="{{ $lightTheme }}"
+  data-theme-dark="{{ $darkTheme }}"></div>
+<script>
+  (function () {
+    var container = document.getElementById("utter-container");
+
+    if (!container) {
+      return;
+    }
+
+    var repo = container.getAttribute("data-repo");
+    var issueTerm = container.getAttribute("data-issue-term");
+    var lightTheme = container.getAttribute("data-theme-light") || "github-light";
+    var darkTheme = container.getAttribute("data-theme-dark") || "github-dark";
+    var utterancesOrigin = "https://utteranc.es";
+
+    if (!repo || !issueTerm) {
+      return;
+    }
+
+    function getCurrentScheme() {
+      try {
+        var savedScheme = localStorage.getItem("scheme");
+
+        if (savedScheme === "dark" || savedScheme === "light") {
+          return savedScheme;
+        }
+      } catch (error) {
+        // Ignore browsers that block storage in privacy mode.
+      }
+
+      return document.documentElement.classList.contains("dark") ? "dark" : "light";
+    }
+
+    function themeForScheme(scheme) {
+      return scheme === "dark" ? darkTheme : lightTheme;
+    }
+
+    function findFrame() {
+      return container.querySelector("iframe");
+    }
+
+    function syncUtterancesTheme(scheme) {
+      var frame = findFrame();
+
+      if (!frame || !frame.contentWindow) {
+        return false;
+      }
+
+      frame.contentWindow.postMessage(
+        {
+          type: "set-theme",
+          theme: themeForScheme(scheme || getCurrentScheme())
+        },
+        utterancesOrigin
+      );
+
+      return true;
+    }
+
+    if ("MutationObserver" in window) {
+      var observer = new MutationObserver(function () {
+        var frame = findFrame();
+
+        if (!frame) {
+          return;
+        }
+
+        frame.addEventListener("load", function () {
+          syncUtterancesTheme(getCurrentScheme());
+        }, { once: true });
+
+        window.setTimeout(function () {
+          syncUtterancesTheme(getCurrentScheme());
+        }, 250);
+
+        observer.disconnect();
+      });
+
+      observer.observe(container, {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    document.addEventListener("site-scheme-change", function (event) {
+      var scheme = event.detail && event.detail.scheme;
+
+      syncUtterancesTheme(scheme || getCurrentScheme());
+    });
+
+    var script = document.createElement("script");
+    script.src = utterancesOrigin + "/client.js";
+    script.setAttribute("repo", repo);
+    script.setAttribute("issue-term", issueTerm);
+    script.setAttribute("theme", themeForScheme(getCurrentScheme()));
+    script.setAttribute("crossorigin", "anonymous");
+    script.async = true;
+
+    container.appendChild(script);
+  })();
 </script>
